@@ -60,6 +60,9 @@ app.get("/interactions", async (req, res) => {
   }
 });
 
+app.use(express.json());
+app.use(cors());
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

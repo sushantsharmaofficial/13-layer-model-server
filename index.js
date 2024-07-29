@@ -34,6 +34,10 @@ const interactionSchema = new mongoose.Schema(
 
 const Interaction = mongoose.model("Interaction", interactionSchema);
 
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 // Routes
 app.post("/save", async (req, res) => {
   try {
